@@ -13,7 +13,10 @@
   <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <%= render "home/navbar" %>
 
-  <%= yield %>
+  <div class="ui container">
+    <%= yield %>
+  </div>
   </body>
 </html>

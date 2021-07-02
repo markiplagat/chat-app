@@ -11,4 +11,9 @@ import '@doabit/semantic-ui-sass'
 
 Rails.start()
 Turbolinks.start()
+// Allow dropdown when turbolinks loads
+$(document).on('turbolinks:load', function () {
+    $('.ui.dropdown').dropdown();
+})
+
 ActiveStorage.start()
