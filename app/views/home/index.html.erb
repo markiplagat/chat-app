@@ -1,6 +1,10 @@
 <h3 class="ui center aligned medium icon header">
   <i class="circular blue rocketchat icon"></i>
-  Hello
+  <% if user_signed_in? %>
+     Hello <%= current_user.name %>
+  <% else %>
+     Hello
+  <% end %>
 </h3>
 
 <div class="ui two column grid">

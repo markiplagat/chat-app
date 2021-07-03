@@ -11,11 +11,12 @@
         Account <i class="dropdown icon"></i>
         <div class="menu">
           <% if user_signed_in? %>
-            <a><%= user.name %></a>
-            <a><%=link_to "Logout", destroy_user_session_path, class: "item" %>></a>
+            <a><%= link_to current_user.name, edit_user_registration_path, class: "item" %></a>
+            <a><%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "item" %>></a>
+          <% else %>
+            <a><%= link_to "Login", new_user_session_path, class: "item" %></a>
+            <a><%= link_to "SignUp", new_user_registration_path, class: "item" %></a>
           <% end %>
-          <a><%=link_to "Login", new_user_session_path, class: "item" %></a>
-          <a><%= link_to "SignUp", new_user_registration_path, class: "item" %></a>
         </div>
       </div>
       <div class="item">
