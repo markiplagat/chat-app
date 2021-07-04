@@ -1,24 +1,35 @@
-# README
+# ChatApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setting up
 
-Things you may want to cover:
+- Clone the repository
+```shell
+$ git clone https://github.com/markiplagat/chat-app.git
+$ cd chat-app
+```
+#### Run
+```shell
+$ sudo apt-get update
+$ sudo apt-install ruby-full
+```
+#### Set ruby version to 3.0.1
+```shell
+$ rbenv local 3.0.1
+or
+$ rvm use 3.0.1
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Install dependencies
+```properties
+bundle & yarn
+```
+### Set up the database
+  Install postgresql and set it up.
+#### Initialize the database
+  ```properties
+  rails db:create db:migrate db:seed
+  ```
+### Running the app
+  ```properties
+  rails server
+  ```
