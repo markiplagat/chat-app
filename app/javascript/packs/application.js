@@ -14,6 +14,9 @@ Turbolinks.start()
 // Allow dropdown when turbolinks loads
 $(document).on('turbolinks:load', function () {
     $('.ui.dropdown').dropdown();
+    $('.message .close').on('click', function() {
+        $(this).closest('.message').transition('fade');
+    });
 })
 
 ActiveStorage.start()

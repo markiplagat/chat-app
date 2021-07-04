@@ -1,0 +1,27 @@
+<% flash.each do |message_type, message_content| %>
+  <div class="ui <%= message_type %> floating message transition">
+    <i class="close icon"></i>
+    <div class="header">
+      <%= message_content %>
+    </div>
+  </div>
+<% end %>
+
+
+
+<!--<div class="ui message">-->
+<!--  <div class="close icon">-->
+<!--    <div class="header">-->
+      <%# if flash[:notice] %>
+<!--        <div class="alert alert-success mt-4" role="alert">-->
+          <%#= flash[:notice]%>
+<!--        </div>-->
+      <%#end %>
+      <%# if flash[:alert] %>
+<!--        <div class="alert alert-danger mt-4 " role="alert">-->
+          <%#= flash[:alert]%>
+<!--        </div>-->
+      <%#end %>
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

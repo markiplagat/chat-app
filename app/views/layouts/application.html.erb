@@ -12,8 +12,10 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  <div>
+    <%= render "layouts/messages" %>
+  </div>
   <%= render "home/navbar" %>
 
   <div class="ui container">
