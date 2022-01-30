@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!
-    def index
-      @message = Message.new
-      @messages = Message.all
-    end
+  def index
+    @message = Message.new
+    @messages = Message.all
+  end
 end
