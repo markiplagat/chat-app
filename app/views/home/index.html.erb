@@ -10,16 +10,9 @@
 <div class="ui two column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui feed">
-          <h4 class="ui header">Real Time Chat</h4>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <%= render 'messages/index' %>
-              </div>
-            </div>
-          </div>
+      <div class="content" id="messages">
+        <div class="ui feed" id="message-container">
+          <%= render 'messages/index' %>
         </div>
       </div>
       <div class="extra content">
@@ -27,7 +20,6 @@
           <div class="field">
             <div class="ui fluid icon input">
               <%= f.text_field :body %>
-              <%= f.hidden_field :user_id, value: current_user.id %>
               <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
             </div>
           </div>

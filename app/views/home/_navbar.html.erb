@@ -1,29 +1,23 @@
-<div class="ui small inverted menu">
-  <div class="ui container">
-    <a>
-      <%= link_to "ChatRoom", root_path, class: "item" %>
-    </a>
-    <a class="item">
-      Messages
-    </a>
-    <div class="right menu">
-      <div class="ui dropdown item">
-        Account <i class="dropdown icon"></i>
-        <div class="menu">
-          <% if user_signed_in? %>
-            <a><%= link_to current_user.name, edit_user_registration_path, class: "item" %></a>
-            <a><%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "item" %>></a>
-          <% else %>
-            <a><%= link_to "Login", new_user_session_path, class: "item" %></a>
-            <a><%= link_to "SignUp", new_user_registration_path, class: "item" %></a>
-          <% end %>
-        </div>
-      </div>
-      <div class="item">
-        <% if user_signed_in? == false %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "ui primary button" %>
-        <% end %>
-      </div>
+<%= link_to "ChatRoom", root_path, class: "item" %>
+  <a class="item">
+    Messages
+  </a>
+<div class="right menu">
+  <div class="ui dropdown item">
+    Account <i class="dropdown icon"></i>
+    <div class="menu">
+      <% if user_signed_in? %>
+        <a><%= link_to current_user.name, edit_user_registration_path, class: "item" %></a>
+        <a><%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "item" %>></a>
+      <% else %>
+        <a><%= link_to "Login", new_user_session_path, class: "item" %></a>
+        <a><%= link_to "SignUp", new_user_registration_path, class: "item" %></a>
+      <% end %>
     </div>
   </div>
+  <% unless user_signed_in? %>
+    <div class="item">
+      <%=  link_to "Sign Up", new_user_registration_path, class: "ui primary button"  %>
+    </div>
+    <% end %>
 </div>

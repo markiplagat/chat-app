@@ -9,22 +9,18 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
   </head>
 
   <body>
 
-  <div>
-    <%= render "layouts/messages" %>
+  <div class="ui small inverted menu">
+    <div class="ui container">
+      <%= render "home/navbar" %>
+    </div>
   </div>
-  <%= render "home/navbar" %>
 
   <div class="ui container">
+    <%= render "layouts/messages" %>
     <%= yield %>
   </div>
   </body>
