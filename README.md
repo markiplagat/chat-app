@@ -12,11 +12,11 @@ $ cd chat-app
 $ sudo apt-get update
 $ sudo apt-install ruby-full
 ```
-#### Set ruby version to 3.0.1
+#### Set ruby version to 3.2.2
 ```shell
-$ rbenv local 3.0.1
+$ rbenv local 3.2.2
 or
-$ rvm use 3.0.1
+$ rvm use 3.2.2
 ```
 
 Install dependencies
